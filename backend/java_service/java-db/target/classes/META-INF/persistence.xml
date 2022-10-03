@@ -20,7 +20,7 @@
             <property name="jakarta.persistence.jdbc.password" value="venturenox" />
 
             <property name="hibernate.show_sql" value="true" />
-            <property name="hibernate.hbm2ddl.auto" value="create" />
+            <property name="hibernate.hbm2ddl.auto" value="none" />
         </properties>
 
     </persistence-unit>

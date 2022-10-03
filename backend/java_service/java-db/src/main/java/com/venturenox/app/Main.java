@@ -34,12 +34,21 @@ public class Main {
 
         EntityManagerFactory entityManagerFactory;
         entityManagerFactory = Persistence.createEntityManagerFactory("my-persistence-unit");
+        // EntityManager entityManager = entityManagerFactory.createEntityManager();
+        // entityManager.getTransaction().begin();
+        // entityManager.persist(new Employee("ammar", "lahore"));
+        // entityManager.persist(new Employee("ammar", "lahore"));
+        // entityManager.getTransaction().commit();
+        // entityManager.close();
+        // entityManagerFactory.close();
+
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         entityManager.getTransaction().begin();
-        entityManager.persist(new Employee("ammar", "lahore"));
-        entityManager.persist(new Employee("ammar", "lahore"));
+        List<Employee> result = entityManager.createQuery("from Employee", Employee.class).getResultList();
+        for (Employee event : result) {
+            System.out.println("Employee -----> (" + event.getName() + ") : " + event.getAddress());
+        }
         entityManager.getTransaction().commit();
         entityManager.close();
-        entityManagerFactory.close();
     }
 }
