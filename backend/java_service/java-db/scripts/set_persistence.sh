@@ -13,6 +13,7 @@ export DB_PASS=$POSTGRES_PASSWORD
 
 echo env $POSTGRES_HOST
 echo $DB_USR
-exit 1
+echo printenv
+# exit 1
 
 envsubst "`printf '${%s} ' $(sh -c "env|cut -d'=' -f1")`" < $XML_TMP > $XML_OUT

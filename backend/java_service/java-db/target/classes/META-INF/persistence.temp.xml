@@ -15,9 +15,9 @@
 
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver" />
-            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://postgres/java_db" />
-            <property name="jakarta.persistence.jdbc.user" value="postgres" />
-            <property name="jakarta.persistence.jdbc.password" value="venturenox" />
+            <property name="jakarta.persistence.jdbc.url" value="$DB_URL" />
+            <property name="jakarta.persistence.jdbc.user" value="$DB_USR" />
+            <property name="jakarta.persistence.jdbc.password" value="$DB_PASS" />
 
             <property name="hibernate.show_sql" value="true" />
             <property name="hibernate.hbm2ddl.auto" value="create" />
