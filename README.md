@@ -55,7 +55,9 @@ Note: a new entity manager is used from the same config object for queries.
 
 - **app -> model/dtos/Employee.java**: the files in this directory is for creating models that map onto the database tables. The classes here are annontated via tags specified by `jakarta.persistence`.
 
-- **app -> utils/dbmanagers/EmployeesDBMan.java**: this file is an example of how to interact with the database table using `HQL` and `Criteria Builder`. The managers will use the entity manager and commit transactions on it. The DB Manager will contain functions that define whichc queries are being performed on the table. For every table there will be a separate DB Manager.
+- **app -> utils/dbmanagers/EmployeesDBMan.java**: this file is an example of how to interact with the database table using `HQL` and `Criteria Builder`. The managers will use the entity manager and commit transactions on it. The DB Manager will contain functions that define whichc queries are being performed on the table. For every table there will be a separate DB Manager.*
+
+- **app -> Main.java**: Contains the example driver code.
 
 ## Techical Stuff
 ORM used in this project is `Hibernate-envers`.
