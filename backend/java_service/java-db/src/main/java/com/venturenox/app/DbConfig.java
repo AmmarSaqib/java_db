@@ -1,4 +1,4 @@
-package com.venturenox;
+package com.venturenox.app;
 
 import jakarta.persistence.Persistence;
 
