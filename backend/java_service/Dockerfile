@@ -2,7 +2,6 @@ FROM maven:3.8.6-jdk-11 AS build
 
 WORKDIR /usr/src/app 
 COPY java-db/pom.xml .
-# RUN mvn dependency:resolve -U
 
 COPY java-db /usr/src/app
 RUN --mount=type=cache,target=/root/.m2 mvn -f /usr/src/app/pom.xml clean compile assembly:single
